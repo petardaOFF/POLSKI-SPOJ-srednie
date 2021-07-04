@@ -14,15 +14,12 @@ namespace LENLCS___Długość_najdłuższego_wspólnego_podciągu
                 Console.ReadLine();
                 string s2 = Console.ReadLine();
                 Console.WriteLine(LCS(s1, s2));
-
-            }
-          
-        }
+             }
+          }
 
         static int LCS(string s1, string s2)
         {
-
-            int[,] c = new int[s1.Length + 1, s2.Length + 1];
+         int[,] c = new int[s1.Length + 1, s2.Length + 1];
            
             for (int i = 1; i <= s1.Length; i++)
             {
@@ -33,8 +30,7 @@ namespace LENLCS___Długość_najdłuższego_wspólnego_podciągu
                     {
                         c[i, j] = c[i - 1, j - 1] + 1;
                     }
-
-                    else
+                     else
                     {
                         if (c[i - 1, j] > c[i, j - 1])
                         {
